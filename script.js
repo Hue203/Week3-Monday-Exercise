@@ -258,14 +258,15 @@ function withMultiLineExpression() {
 console.log(withMultiLineExpression());
 
 function curryAdd() {
+  const curryAddition = (a) => (b) => (c) => a + b + c;
   return curryAddition(9)(3)(5);
-  function curryAddition(a) {
-    return function (b) {
-      return function (c) {
-        return a + b + c;
-      };
-    };
-  }
+  // function curryAddition(a) {
+  //   return function (b) {
+  //     return function (c) {
+  //       return a + b + c;
+  //     };
+  //   };
+  // }
 }
 
 console.log(curryAdd());
